@@ -1,0 +1,57 @@
+.item {
+  display: flex;
+  padding: 15px;
+  border: 3px solid rgba(0, 0, 0, 0.781);
+  margin-top: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.507);
+  border-radius: 30px;
+}
+.post {
+  overflow-wrap: break-word;
+  width: 85%;
+  text-align: left;
+}
+
+.title {
+  max-width: 50%;
+}
+.buttonChange {
+  cursor: pointer;
+  color: rgb(153, 114, 9);
+  padding: 0 7px;
+  font-size: 45px;
+  transition: transform 0.3s;
+}
+
+.deletePost {
+  cursor: pointer;
+  color: rgb(209, 21, 21);
+  padding: 0 7px;
+  font-size: 45px;
+  transition: transform 0.3s;
+}
+
+.buttonChange:hover,
+.deletePost:hover {
+  cursor: pointer;
+  transform: scale(1.6);
+}
+
+.buttonChange:hover {
+  color: rgb(255, 197, 39);
+}
+
+.deletePost:hover {
+  color: red;
+}
+
+.numberPost {
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.781);
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-bottom: 3px;
+  max-inline-size: 60px;
+}
