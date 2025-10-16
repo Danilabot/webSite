@@ -16,7 +16,7 @@ export const PostForm = ({ addPost }) => {
   }
 
   return (
-    <>
+    <div>
       <form>
         <MyInput
           type="text"
@@ -31,9 +31,13 @@ export const PostForm = ({ addPost }) => {
           onChange={(e) => setText({ ...text, body: e.target.value })}
         />
       </form>
-      <MyButton disabled={!text.title} onClick={addNewPost}>
-        Добавить пост
-      </MyButton>
-    </>
+      <div
+        style={{ display: 'flex', justifyContent: 'center', marginTop: '5px' }}
+      >
+        <MyButton disabled={!text.title} onClick={addNewPost}>
+          Добавить пост
+        </MyButton>
+      </div>
+    </div>
   )
 }

@@ -1,21 +1,11 @@
-import { ChangeModal } from '../UI/modal/ChangeModal'
 import styles from './styles/Item.module.css'
-import { useState } from 'react'
 import { RiDeleteBin2Line } from 'react-icons/ri'
-import { LiaExchangeAltSolid } from 'react-icons/lia'
+import { ButtonChangeModal } from './ButtonChangeModal'
+import { HiMiniMagnifyingGlass } from 'react-icons/hi2'
+import { useNavigate } from 'react-router-dom'
 
 export const PostItem = (props) => {
-  const [isEditing, setIsEditing] = useState(false)
-
-  const handleSave = (updatedPost) => {
-    props.onChange(updatedPost)
-    setIsEditing(false)
-  }
-
-  const handleCancel = () => {
-    setIsEditing(false)
-  }
-
+  const router = useNavigate()
   return (
     <div className={styles.item}>
       <div className={styles.post}>
@@ -26,16 +16,11 @@ export const PostItem = (props) => {
 
         <div className={styles.body}>{props.post.body || 'Нет описания'}</div>
       </div>
-      <LiaExchangeAltSolid
-        className={styles.buttonChange}
-        onClick={() => setIsEditing(true)}
+      <HiMiniMagnifyingGlass
+        className={styles.OpenPost}
+        onClick={() => router(`/posts/${props.post.id}`)}
       />
-      <ChangeModal
-        post={props.post}
-        isOpen={isEditing}
-        onSave={handleSave}
-        onCancel={handleCancel}
-      />
+      <ButtonChangeModal post={props.post} onChange={props.onChange} />
       <RiDeleteBin2Line
         className={styles.deletePost}
         onClick={() => props.postDelete(props.post)}

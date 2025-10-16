@@ -32,7 +32,15 @@
   font-size: 45px;
   transition: transform 0.3s;
 }
+.OpenPost {
+  cursor: pointer;
+  color: rgb(2, 102, 24);
+  padding: 0 7px;
+  font-size: 45px;
+  transition: transform 0.3s;
+}
 
+.OpenPost:hover,
 .buttonChange:hover,
 .deletePost:hover {
   cursor: pointer;
@@ -45,6 +53,9 @@
 
 .deletePost:hover {
   color: red;
+}
+.OpenPost:hover {
+  color: rgb(10, 192, 49);
 }
 
 .numberPost {
