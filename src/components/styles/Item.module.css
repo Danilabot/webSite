@@ -1,12 +1,19 @@
 .item {
   display: flex;
   padding: 15px;
-  border: 3px solid rgba(0, 0, 0, 0.781);
-  margin-top: 20px;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.507);
-  border-radius: 30px;
+  margin-top: 70px;
+  border: solid 2px black;
+  border-radius: 20px;
+  background-color: rgba(226, 226, 226, 0.5);
+  cursor: grab; /* Рука при наведении */
+}
+.item:hover {
+  transform: translateY(-2px) scale(1.08); /* Поднимает и увеличивает */
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.15); /* Усиливает тень */
+  transition: transform 0.3s;
+}
+.item:active {
+  cursor: grabbing;
 }
 .post {
   overflow-wrap: break-word;
@@ -15,7 +22,7 @@
 }
 
 .title {
-  max-width: 50%;
+  max-width: 90%;
 }
 .buttonChange {
   cursor: pointer;
@@ -59,10 +66,19 @@
 }
 
 .numberPost {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   border: 1px solid rgba(0, 0, 0, 0.781);
   border-radius: 10px;
   padding-left: 5px;
   padding-bottom: 3px;
   max-inline-size: 60px;
+}
+
+.savedPost {
+  display: flex;
+  padding: 15px;
+  margin-top: 70px;
+  border: solid 2px black;
+  border-radius: 20px;
+  cursor: default;
 }

@@ -4,5 +4,10 @@
   margin-top: 30px;
 }
 .text {
-  color: aqua;
+  color: rgb(0, 0, 0);
+}
+.spisok {
+  text-align: right;
+  margin: 20px;
+  color: rgb(0, 0, 0);
 }

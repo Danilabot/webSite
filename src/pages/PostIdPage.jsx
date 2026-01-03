@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useFetching } from '../hooks/useFetching'
 import PostService from '../API/PostService'
 import { Loader } from '../UI/Loader/Loader'
+import styles from './PostIdPage.module.css'
 
 export const PostIdPage = () => {
   const params = useParams()
@@ -25,7 +26,7 @@ export const PostIdPage = () => {
     fetchComments()
   }, [params.id])
   return (
-    <div>
+    <div className={styles.page}>
       <h1>Posts Page with ID = {params.id}</h1>
       {isLoading ? (
         <Loader />
@@ -34,15 +35,15 @@ export const PostIdPage = () => {
           {post.id}. {post.title}
         </div>
       )}
-      <h1>Комментарии</h1>
+      <h1 style={{ marginBottom: '20px', marginTop: '10px' }}>Комментарии</h1>
       {isCommentsLoading ? (
         <Loader />
       ) : (
         <div>
           {comments.map((comment) => (
             <div key={comment.id}>
-              <h5>{comment.email}</h5>
-              <div> {comment.body}</div>
+              <h3>{comment.email}</h3>
+              <div style={{ marginBottom: '20px' }}> {comment.body}</div>
             </div>
           ))}
         </div>

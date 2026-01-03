@@ -1,6 +1,7 @@
-import { getPagesArray } from '../../components/utils/pages'
+import { useGetPagesArray } from '../../components/utils/pages'
+
 export const Pagination = ({ totalPages, page, changePage }) => {
-  let pagesArray = getPagesArray(totalPages)
+  let pagesArray = useGetPagesArray(totalPages)
 
   return (
     <div className="page__wrapper">

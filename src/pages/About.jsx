@@ -1,3 +1,3 @@
 export const About = () => {
-  return <div>Пошел нахуй</div>
+  return <div>HELOOOOOOOOOOOO</div>
 }
