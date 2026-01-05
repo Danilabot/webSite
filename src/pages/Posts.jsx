@@ -15,6 +15,7 @@ import { PostsDndContainer } from '../components/PostsDndContainer'
 import { PiPhoneDisconnect } from 'react-icons/pi'
 import styles from './Posts.module.css'
 
+
 function Posts() {
   const [posts, setPosts] = useState([])
   const [savePosts, setSavePosts] = useState([])
@@ -100,7 +101,7 @@ function Posts() {
   }
 
   return (
-    <div className="App">
+    <div className={styles.app}>
       <MyButton className={styles.buttonPost} onClick={() => setModal(true)}>
         Создать пост
       </MyButton>

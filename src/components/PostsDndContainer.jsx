@@ -17,13 +17,6 @@ export const PostsDndContainer = ({
   return (
 
     <DndContext onDragEnd={onDragEnd}>
-      
-        <PostList
-          addPost={addPost}
-          posts={sortedAndSearchedPosts}
-          postDelete={postDelete}
-          changePost={changePost}
-        />
         <DropSave id="saved-posts">
           {savePosts.length === 0
             ? null
@@ -37,6 +30,13 @@ export const PostsDndContainer = ({
                 />
               ))}
         </DropSave>
+      
+        <PostList
+          addPost={addPost}
+          posts={sortedAndSearchedPosts}
+          postDelete={postDelete}
+          changePost={changePost}
+        />
       
     </DndContext>
   )

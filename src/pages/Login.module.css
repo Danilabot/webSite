@@ -1,8 +1,8 @@
 .login {
   padding: 15px;
   margin-top: 300px;
-  justify-content: space-between;
-  align-items: center;
+  display:grid;
+  justify-content: center;
 }
 
 .text_login {
@@ -14,7 +14,7 @@
   font-size: 20px;
   padding: 10px;
   border-radius: 5px;
-  margin-left: 40%;
   margin-top: 10px;
   cursor: pointer;
 }
+

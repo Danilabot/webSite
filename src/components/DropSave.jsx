@@ -9,13 +9,13 @@ export function DropSave({ id, children, title }) {
     },
   })
   const style = {
-    backgroundColor: isOver ? 'green' : undefined,
+    backgroundColor: isOver ? 'green' : null,
   }
 
   return (
-    <div ref={setNodeRef} style={style} className={styles.drop}>
-      <h2 className={styles.save_text}>Сохранненые посты</h2>
-      <div className={styles.child}>{children}</div>
+    <div ref={setNodeRef} style={style} className={styles.drop} >
+      <h2 className={styles.save_text} >Сохранненые посты</h2>
+      <div className={styles.child} >{children}</div>
     </div>
   )
 }
